@@ -2,89 +2,129 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucky Noah - Backend Engineer</title>
+
+    <title>Lucky Noah | Backend Engineer</title>
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
     <style>
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         scroll-behavior: smooth;
       }
-      /* Custom scrollbar */
+
       ::-webkit-scrollbar {
         width: 8px;
       }
+
       ::-webkit-scrollbar-track {
         background: #f1f1f1;
       }
+
       ::-webkit-scrollbar-thumb {
         background: #94a3b8;
         border-radius: 4px;
       }
+
       ::-webkit-scrollbar-thumb:hover {
         background: #64748b;
       }
-      
+
       /* Print Styles for CV Download */
       @media print {
         @page {
           margin: 0.5cm;
-          size: auto; 
+          size: auto;
         }
+
         body {
           background: white;
           color: black;
           -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
         }
-        nav, footer, .fixed, button, .no-print {
+
+        nav,
+        footer,
+        .fixed,
+        button,
+        .no-print {
           display: none !important;
         }
+
         #root {
           padding: 0;
         }
+
         section {
           break-inside: avoid;
           padding: 10px 0 !important;
           page-break-inside: avoid;
         }
-        /* Simplify visual elements for print */
-        .bg-gradient-to-br, .bg-slate-900, .bg-slate-50, .bg-slate-800 {
+
+        .bg-gradient-to-br,
+        .bg-slate-900,
+        .bg-slate-50,
+        .bg-slate-800 {
           background: none !important;
           color: black !important;
         }
-        .text-white, .text-slate-300, .text-indigo-200 {
+
+        .text-white,
+        .text-slate-300,
+        .text-indigo-200 {
           color: black !important;
         }
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
           color: black !important;
         }
+
         a {
           text-decoration: none;
           color: black !important;
         }
-        /* Ensure timeline lines print */
-        .border-slate-200, .bg-slate-200 {
+
+        .border-slate-200,
+        .bg-slate-200 {
           border-color: #ddd !important;
           background-color: #ddd !important;
         }
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
-  }
-}
-</script>
-</head>
+
+    <!-- Import Maps -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+          "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
+        }
+      }
+    </script>
+  </head>
+
   <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+
+    <!-- ✅ THIS IS THE FIX -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
