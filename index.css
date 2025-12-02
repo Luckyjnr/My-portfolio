@@ -1,0 +1,95 @@
+/* Base styles for the portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Ensure Tailwind works properly */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback styles in case Tailwind doesn't load */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles for CV download */
+@media print {
+  @page {
+    margin: 0.5cm;
+    size: auto; 
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  nav, footer, .fixed, button, .no-print {
+    display: none !important;
+  }
+  
+  #root {
+    padding: 0;
+  }
+  
+  section {
+    break-inside: avoid;
+    padding: 10px 0 !important;
+    page-break-inside: avoid;
+  }
+  
+  .bg-gradient-to-br, .bg-slate-900, .bg-slate-50, .bg-slate-800 {
+    background: none !important;
+    color: black !important;
+  }
+  
+  .text-white, .text-slate-300, .text-indigo-200 {
+    color: black !important;
+  }
+  
+  h1, h2, h3, h4 {
+    color: black !important;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black !important;
+  }
+  
+  .border-slate-200, .bg-slate-200 {
+    border-color: #ddd !important;
+    background-color: #ddd !important;
+  }
+}
