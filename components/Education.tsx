@@ -1,16 +1,14 @@
 import React from 'react';
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import { EducationItem } from '../types';
 
 interface EducationProps {
   education: EducationItem[];
-  awards: string[];
 }
 
-export const Education: React.FC<EducationProps> = ({ education, awards }) => {
+export const Education: React.FC<EducationProps> = ({ education }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-      {/* Education Column */}
+    <div className="mt-12">
       <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
         <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
           <GraduationCap className="text-indigo-600" />
@@ -26,26 +24,6 @@ export const Education: React.FC<EducationProps> = ({ education, awards }) => {
                 <span>{edu.location}</span>
                 <span>{edu.date}</span>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Awards Column */}
-      <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-        <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-          <Award className="text-amber-500" />
-          Honors & Awards
-        </h3>
-        <div className="space-y-4">
-          {awards.map((award, idx) => (
-            <div key={idx} className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
-              <div className="mt-1 text-amber-500">
-                <Award size={16} />
-              </div>
-              <p className="text-sm text-slate-700 font-medium leading-relaxed">
-                {award}
-              </p>
             </div>
           ))}
         </div>

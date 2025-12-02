@@ -43,7 +43,6 @@ export interface ResumeData {
   skills: SkillGroup[];
   experience: Experience[];
   education: EducationItem[];
-  awards: string[];
   projects: Project[];
 }
 

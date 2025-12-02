@@ -86,7 +86,7 @@ const App: React.FC = () => {
             <section id="about" className="py-20 bg-white">
               <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <Summary text={RESUME_DATA.summary} />
-                <Education education={RESUME_DATA.education} awards={RESUME_DATA.awards} />
+                <Education education={RESUME_DATA.education} />
               </div>
             </section>
 

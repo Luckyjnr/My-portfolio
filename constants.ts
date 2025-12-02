@@ -10,7 +10,7 @@ export const RESUME_DATA: ResumeData = {
     linkedin: "https://www.linkedin.com/in/noahlucky",
     github: "https://github.com/Luckyjnr"
   },
-  summary: "Backend developer with proven success at Helium Health, optimizing Node.js APIs and improving database solutions, resulting in a 25% reduction in data processing time. Expertise in AWS and Docker enhances capabilities in API security and team collaboration. Committed to driving digital transformations in healthcare through innovative technology solutions.",
+  summary: "Backend Software Engineer with experience building and optimizing secure, scalable APIs using Node.js, Express.js, MongoDB, and PostgreSQL across healthcare, education, and fintech systems. Improved API performance by 25% at Helium Health while supporting platforms processing 1,000+ daily records, and built feedback systems that increased adoption by 40%. Founder and backend lead for Safe Anchor and EduConnect, delivering production-ready systems with secure authentication, expert matching, and cloud deployment on AWS. Skilled in Docker, CI/CD automation, API documentation, and clean backend architecture.",
   skills: [
     { category: "Backend Dev", items: ["Node.js", "Express.js", "API Design"], value: 95 },
     { category: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "Mongoose"], value: 90 },
@@ -48,22 +48,13 @@ export const RESUME_DATA: ResumeData = {
   ],
   education: [
     {
-      degree: "Backend Engineering Program",
-      institution: "Vephla University",
-      location: "Nigeria",
-      date: "Expected Dec 2025"
-    },
-    {
       degree: "BEng: Chemical Engineering",
       institution: "Abubakar Tafawa-Balewa University",
       location: "Nigeria",
       date: "October 2024"
     }
   ],
-  awards: [
-    "Top Performing Backend Student, Vephla University, 2025",
-    "Helium Health Internship Completion Award, 2023"
-  ],
+
   projects: [
     {
       id: "proj-1",
